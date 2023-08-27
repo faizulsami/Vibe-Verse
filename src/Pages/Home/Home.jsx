@@ -12,7 +12,7 @@ const Home = () => {
             </div>
             <Outlet />
             <div className="grid  md:grid-cols-12 gap-5">
-                <div className='hidden md:block md:col-span-3 lg:mt-3 md:mt-5 lg:ml-4 md:ml-2'>
+                <div className='hidden md:block md:col-span-3 lg:mt-3  md:mt-5 lg:ml-4 md:ml-2'>
                     <ProfileSide />
                 </div>
 

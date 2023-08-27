@@ -13,7 +13,7 @@ const FollowersCard = () => {
                             <span className="lg:text-base md:text-xs">@{follower.username}</span>
                         </div>
                     </div>
-                    <a href="#_" className="relative inline-flex items-center justify-start lg:px-6 md:px-3 lg:py-3 md:py-2 overflow-hidden font-medium transition-all bg-sky-300 rounded-xl group">
+                    <a href="#_" className="relative inline-flex items-center justify-start lg:px-3 px-3 py-2 md:px-3 lg:py-2 md:py-2 overflow-hidden font-medium transition-all bg-sky-300 rounded-xl group">
                         <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-[#a6ddf0] rounded group-hover:-mr-4 group-hover:-mt-4">
                             <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
                         </span>

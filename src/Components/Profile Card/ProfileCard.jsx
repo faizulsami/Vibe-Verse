@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const ProfileCard = () => {
     return (
         <div className=" flex flex-col  gap-4 rounded-2xl overflow-x-clip bg-white">
-            <img src={Cover} />
+            <img className='' src={Cover} />
             <div className="flex flex-col items-center   gap-2 ">
 
                 <img className='w-24 md:w-16 lg:w-24 rounded-full ' src={Profile} />
