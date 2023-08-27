@@ -10,11 +10,11 @@ const Profile = () => {
              <div className=' md:hidden'>
                 <Nav />
             </div>
-            <div className="grid md:grid-cols-12 gap-5">
+            <div className="grid md:grid-cols-12  gap-5">
                 <div className="lg:p-5 md:col-span-3 md:ms-2 md:mt-6 lg:mt-0 hidden md:block">
                     <ProfileLeft/>
                 </div>
-                <div className="md:col-span-6 pt-6 grid gap-y-5">
+                <div className="md:col-span-6 p-3 pt-6 grid gap-y-5">
                     <ProfileCard />
                     <PostSide />
                 </div>
