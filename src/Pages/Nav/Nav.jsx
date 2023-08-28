@@ -5,7 +5,7 @@ import ProfileLeft from '../../Components/Profile Left/ProfileLeft';
 import ProfileSide from '../../Components/Profile Side/ProfileSide';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaSlackHash } from "react-icons/fa";
-import { TiHomeOutline } from "react-icons/ti";
+import { RiHome6Fill   } from "react-icons/ri";
 import { CgProfile } from "react-icons/cg";
 
 
@@ -53,7 +53,7 @@ const Nav = () => {
                         </li>
 
                         <li>
-                            <Link to="/" className="text-gray-900 dark:text-white hover:underline" aria-current="page"><TiHomeOutline className='text-2xl' /></Link>
+                            <Link to="/" className="text-gray-900 dark:text-white hover:underline" aria-current="page"><RiHome6Fill  className='text-2xl' /></Link>
                         </li>
 
                         <li>
