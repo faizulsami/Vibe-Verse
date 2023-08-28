@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyA60ZbmkRQkCQS0oM5QyQP0qHkwasorrF0",
-  authDomain: "vibe-verse.firebaseapp.com",
-  projectId: "vibe-verse",
-  storageBucket: "vibe-verse.appspot.com",
-  messagingSenderId: "424465152540",
-  appId: "1:424465152540:web:c5bdd7e983380c4229bdd9"
+  apiKey: "AIzaSyALvgt1m0y-nCrnkko1Tmp1CapH3m1xGcE",
+  authDomain: "vibeverse0.firebaseapp.com",
+  projectId: "vibeverse0",
+  storageBucket: "vibeverse0.appspot.com",
+  messagingSenderId: "1069569837513",
+  appId: "1:1069569837513:web:d70b76fe747c847eac0018"
 };
 
 // Initialize Firebase
