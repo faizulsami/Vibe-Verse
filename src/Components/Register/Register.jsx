@@ -36,7 +36,7 @@ const Register = () => {
                     .then(() => {
                         const saveUser = { name: data.name, email: data.email, password: data.password, photo: data.photo };
 
-                        fetch('', {
+                        fetch('http://localhost:5000/users', {
                             method: 'POST',
                             headers: {
                                 'content-type': 'application/json'
