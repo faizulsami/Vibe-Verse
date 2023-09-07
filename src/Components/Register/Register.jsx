@@ -10,6 +10,7 @@ const Register = () => {
     const { createUser, updateUserProfile } = useContext(AuthContext);
     const [error, setError] = useState('');
     const navigate = useNavigate();
+    const currentTime = new Date();
     const {
         register,
         handleSubmit,
@@ -21,20 +22,24 @@ const Register = () => {
     const password = watch("password");
 
     const onSubmit = data => {
-        console.log(data);
-        console.log('dadasas');
-        console.log(data.confirmPassword, data.password);
+
 
         if (data.password !== data.confirmPassword) {
             setError('Password and Confirm Password should match');
             return;
         }
+        const followers = []
+        const following = []
+        const isAdmin = false;
+   
+        const createAt = currentTime.toISOString();
+        console.log(createAt);
 
         createUser(data.email, data.password)
             .then(result => {
                 updateUserProfile(data.name, data.photo)
                     .then(() => {
-                        const saveUser = { name: data.name, email: data.email, password: data.password, photo: data.photo };
+                        const saveUser = { name: data.name, email: data.email, password: data.password, photo: data.photo, isAdmin, followers, following,createAt };
 
                         fetch('http://localhost:5000/users', {
                             method: 'POST',
