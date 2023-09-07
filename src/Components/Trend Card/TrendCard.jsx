@@ -2,7 +2,7 @@ import { TrendData } from "../Data/TrendData";
 
 const TrendCard = () => {
     return (
-        <div style={{backgroundColor:'var(--cardColor)'}} className="flex flex-col gap-4 p-4 rounded-2xl lg:pl-8 md:pl-4 md:w-44 lg:w-full">
+        <div style={{backgroundColor:'var(--cardColor)'}} className="flex flex-col gap-4 my-10 p-4 rounded-2xl lg:pl-8 md:pl-4 md:w-44 lg:w-full">
             <h3 className="font-bold lg:text-xl md:text-md">Trends for you</h3>
             {TrendData.map((trend)=>{
                 return(

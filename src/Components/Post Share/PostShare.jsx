@@ -26,35 +26,29 @@ const PostShare = () => {
                     <input  className="w-full rounded-xl p-3 lg:text-lg md:text-md border-none outline-none" type="text" placeholder="What's happening" />
                 </div>
 
-                    <div className="pt-5 md:pt-2 lg:pt-5 grid grid-cols-3 md:flex justify-around">
-                        <div className="p-1 pr-1 rounded-xl flex items-center justify-center lg:text-lg md:text-xs hover:cursor-pointer" style={{ color: "var(--photo)" }}
+                    <div className="pt-5 md:pt-2 text-sm lg:pt-5 grid grid-cols-3 md:flex justify-around">
+                        <div className="p-1 pr-6 rounded-xl flex items-center justify-center lg:text-lg md:text-xs hover:cursor-pointer" style={{ color: "var(--photo)" }}
                             onClick={() => imageRef.current.click()}
                         >
                             <HiOutlinePhoto className="lg:text-xl md:text-md" />
                             Photo
                         </div>
-                        <div className="p-1 pr-1 rounded-xl flex items-center justify-center lg:text-lg md:text-xs hover:cursor-pointer" style={{ color: "var(--video)" }}>
-                            <MdSlowMotionVideo className="lg:text-xl md:text-md" />
+                        <div className="p-1 pr-1 text-sm rounded-xl flex items-center justify-center lg:text-lg md:text-xs hover:cursor-pointer" style={{ color: "var(--video)" }}>
+                            <MdSlowMotionVideo className="lg:text-xl  md:text-md" />
                             Video
                         </div>{" "}
-                        <div className="p-1 pr-2 rounded-xl flex items-center justify-center lg:text-lg md:text-xs hover:cursor-pointer" style={{ color: "var(--location)" }}>
+                        <div className="p-1 text-sm pr-2 rounded-xl flex items-center justify-center lg:text-lg md:text-xs hover:cursor-pointer" style={{ color: "var(--location)" }}>
                             <SlLocationPin className="lg:text-xl md:text-md" />
                             Location
                         </div>{" "}
-                        <div className="p-1 pr-2 rounded-xl flex items-center justify-center lg:text-lg md:text-xs hover:cursor-pointer" style={{ color: "var(--shedule)" }}>
+                        <div className="p-1 text-sm rounded-xl flex items-center justify-center lg:text-lg md:text-xs hover:cursor-pointer" style={{ color: "var(--shedule)" }}>
                             <HiOutlineCalendarDays className="lg:text-xl md:text-md" />
                             Schedule
                         </div>
-                        <div className="ps-4 md:ps-4">
-                        <a href="#_" className="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-[#a6ddf0] rounded-full shadow-md group lg:w-24 md:w-16 lg:h-10 md:h-4">
-                            <span className="absolute inset-0 flex items-center justify-center w-full h-full text-[#a6ddf0] duration-300 -translate-x-full bg-white group-hover:translate-x-0 ease lg:text-base md:text-xs">
-                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                                </svg>
-                            </span>
-                            <span className="absolute flex items-center justify-center w-full h-full text-[#a6ddf0] transition-all duration-300 transform group-hover:translate-x-full ease lg:text-base md:text-xs">Share</span>
-                            <span className="relative invisible">Share</span>
-                        </a>
+                        <div className="ps-4 text-sm md:ps-4">
+                     
+                            <span className=" flex items-center justify-center w-full h-full text-[#a6ddf0] lg:text-base md:text-md">Share</span>
+
                         </div>
                         <div style={{ display: "none" }}>
                             <input

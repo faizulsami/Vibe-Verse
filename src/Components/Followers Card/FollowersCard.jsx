@@ -7,13 +7,13 @@ const FollowersCard = () => {
             {Followers.map((follower, id) => (
                 <div className="flex justify-between items-center" key={id}>
                     <div className="flex lg:gap-3 md:gap-1">
-                        <img src={follower.img} alt="" className='lg:w-14 md:w-10 lg:h-14 md:h-10 object-cover rounded-full' />
+                        <img src={follower.img} alt="" className='lg:w-14 w-10 lg:h-14 md:h-10 object-cover rounded-full' />
                         <div className="flex flex-col items-start justify-center">
                             <span className="font-bold lg:text-base md:text-xs">{follower.name}</span>
                             <span className="lg:text-base md:text-xs">@{follower.username}</span>
                         </div>
                     </div>
-                    <a href="#_" className="relative inline-flex items-center justify-start lg:px-6 md:px-3 lg:py-3 md:py-2 overflow-hidden font-medium transition-all bg-sky-300 rounded-xl group">
+                    <a href="#_" className="relative inline-flex items-center justify-start lg:px-3 px-3 py-2 md:px-3 lg:py-2 md:py-2 overflow-hidden font-medium transition-all bg-sky-300 rounded-xl group">
                         <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-[#a6ddf0] rounded group-hover:-mr-4 group-hover:-mt-4">
                             <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
                         </span>

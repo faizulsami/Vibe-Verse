@@ -5,7 +5,7 @@ import ProfileCard from "../Profile Card/ProfileCard";
 const ProfileSide = () => {
     return (
         <div>
-            <div className="flex flex-col gap-4 overflow-auto">
+            <div className="flex flex-col gap-4  ">
                 <LogoSearch/>
                 <ProfileCard/>
                 <FollowersCard/>
