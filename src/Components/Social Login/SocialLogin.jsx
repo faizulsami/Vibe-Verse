@@ -2,14 +2,9 @@ import { FcGoogle } from 'react-icons/fc';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Provider/AuthProvider';
 import { useContext } from 'react';
-import { Timeline } from '@mantine/core';
-
-
 
 const SocialLogin = () => {
-
     const currentTime = new Date();
-
     const { googlePopup } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
@@ -20,8 +15,6 @@ const SocialLogin = () => {
         const followers = [];
         const following=[];
         const createAt = currentTime.toISOString();
-      
-
 
         googlePopup()
             .then((result) => {

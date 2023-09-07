@@ -31,7 +31,7 @@ const Register = () => {
         const followers = []
         const following = []
         const isAdmin = false;
-   
+
         const createAt = currentTime.toISOString();
         console.log(createAt);
 
@@ -39,7 +39,7 @@ const Register = () => {
             .then(result => {
                 updateUserProfile(data.name, data.photo)
                     .then(() => {
-                        const saveUser = { name: data.name, email: data.email, password: data.password, photo: data.photo, isAdmin, followers, following,createAt };
+                        const saveUser = { name: data.name, email: data.email, password: data.password, photo: data.photo, isAdmin, followers, following, createAt };
 
                         fetch('http://localhost:5000/users', {
                             method: 'POST',
