@@ -2,17 +2,25 @@ import { FcGoogle } from 'react-icons/fc';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Provider/AuthProvider';
 import { useContext } from 'react';
+
 const SocialLogin = () => {
+    const currentTime = new Date();
     const { googlePopup } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || "/";
+
     const handleGoogleLogin = () => {
+        const isAdmin= false;
+        const followers = [];
+        const following=[];
+        const createAt = currentTime.toISOString();
+
         googlePopup()
             .then((result) => {
                 const loggedInUser = result.user;
-                console.log(loggedInUser);
-                const saveUser = { name: loggedInUser.displayName, email: loggedInUser.email ,photo:loggedInUser.photoURL }
+        
+                const saveUser = { name: loggedInUser.displayName, email: loggedInUser.email ,photo:loggedInUser.photoURL,isAdmin,followers,following ,createAt}
                 fetch('http://localhost:5000/users', {
                     method: 'POST',
                     headers: {
