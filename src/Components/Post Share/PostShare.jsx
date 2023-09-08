@@ -20,7 +20,7 @@ const PostShare = () => {
         }
     };
     return (
-        <div className=" bg-white  rounded-2xl p-4 mt-5"> 
+        <div className="bg-white rounded-2xl md:p-1 lg:p-4"> 
                 <div className="flex ">
                     <img className="rounded-full lg:w-12 w-11 lg:h-12 h-11" src={ProfileImage} alt="" />
                     <input  className="w-full rounded-xl p-3 lg:text-lg md:text-md border-none outline-none" type="text" placeholder="What's happening" />

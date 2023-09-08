@@ -8,14 +8,14 @@ const RightSide = () => {
   console.log(modalOpened);
   return (
     <div className="grid lg:gap-y-10 md:gap-y-4" >
-      <div className="mt-6 lg:text-2xl md:text-xl flex md:gap-8 lg:justify-between">
+      <div className="mt-6 lg:text-2xl md:text-xl text-2xl flex md:gap-8 justify-around lg:justify-between">
         <RiHome6Fill  />
         <RiSettings3Line  />
         <RiNotification3Line  />
         <FaRegCommentDots  />
       </div>
       <TrendCard />
-      <a href="#_" onClick={() => setModalOpened(true)} className="relative lg:w-64 md:w-28 md:text-sm lg:text-base text-center px-5 py-3 overflow-hidden font-semibold mx-auto text-gray-600 bg-gray-100 border border-gray-100 rounded-lg shadow-inner group">
+      <a href="#_" onClick={() => setModalOpened(true)} className="relative mt-3 lg:w-64 md:w-28 md:text-sm lg:text-base text-center px-5 py-3 overflow-hidden font-semibold mx-auto text-gray-600 bg-gray-100 border border-gray-100 rounded-lg shadow-inner group">
         <span className="absolute top-0 left-0 w-0 h-0 transition-all duration-200 border-t-2 border-[#a6ddf0] group-hover:w-full ease"></span>
         <span className="absolute bottom-0 right-0 w-0 h-0 transition-all duration-200 border-b-2 border-[#a6ddf0] group-hover:w-full ease"></span>
         <span className="absolute top-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-[#a6ddf0] group-hover:h-full ease"></span>

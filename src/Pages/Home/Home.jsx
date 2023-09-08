@@ -16,7 +16,7 @@ const Home = () => {
                     <ProfileSide />
                 </div>
 
-                <div className=' md:col-span-6'>
+                <div className='md:col-span-6 mt-5'>
                     <PostSide />
                 </div>
 

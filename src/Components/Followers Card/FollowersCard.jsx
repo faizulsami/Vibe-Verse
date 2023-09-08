@@ -8,7 +8,7 @@ const FollowersCard = () => {
                 <div className="flex justify-between items-center" key={id}>
                     <div className="flex lg:gap-3 md:gap-1">
                         <img src={follower.img} alt="" className='lg:w-14 w-10 lg:h-14 md:h-10 object-cover rounded-full' />
-                        <div className="flex flex-col items-start justify-center">
+                        <div className="flex flex-col items-start justify-center ms-2 md:ms-0 lg:ms-0">
                             <span className="font-bold lg:text-base md:text-xs">{follower.name}</span>
                             <span className="lg:text-base md:text-xs">@{follower.username}</span>
                         </div>

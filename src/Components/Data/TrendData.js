@@ -11,7 +11,7 @@ export const TrendData = [
     },
     {
         id: 3,
-        name: "Zainkeepscode",
+        name: "The Weeknd",
         shares: 75.5,
     },
     {
