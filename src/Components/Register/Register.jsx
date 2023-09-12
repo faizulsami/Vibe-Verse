@@ -10,6 +10,7 @@ const Register = () => {
     const { createUser, updateUserProfile } = useContext(AuthContext);
     const [error, setError] = useState('');
     const navigate = useNavigate();
+    const currentTime = new Date();
     const {
         register,
         handleSubmit,
@@ -21,22 +22,26 @@ const Register = () => {
     const password = watch("password");
 
     const onSubmit = data => {
-        console.log(data);
-        console.log('dadasas');
-        console.log(data.confirmPassword, data.password);
+
 
         if (data.password !== data.confirmPassword) {
             setError('Password and Confirm Password should match');
             return;
         }
+        const followers = []
+        const following = []
+        const isAdmin = false;
+
+        const createAt = currentTime.toISOString();
+        console.log(createAt);
 
         createUser(data.email, data.password)
             .then(result => {
                 updateUserProfile(data.name, data.photo)
                     .then(() => {
-                        const saveUser = { name: data.name, email: data.email, password: data.password, photo: data.photo };
+                        const saveUser = { firstName: data.first_name, lastName: data.last_name, email: data.email, password: data.password, photo: data.photo, isAdmin, followers, following, createAt };
 
-                        fetch('', {
+                        fetch('http://localhost:5000/users', {
                             method: 'POST',
                             headers: {
                                 'content-type': 'application/json'
@@ -72,15 +77,27 @@ const Register = () => {
                         </p>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text text-black">Name</span>
+                                <span className="label-text text-black">First Name</span>
                             </label>
                             <input
                                 type="text"
-                                {...register("name", { required: true })}
+                                {...register("first_name", { required: true })}
                                 placeholder="user name"
                                 className="input input-bordered"
                             />
-                            {errors.name && <span className="text-red-700">Name is required</span>}
+                            {errors.name && <span className="text-red-700">First name is required</span>}
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text text-black">Last Name</span>
+                            </label>
+                            <input
+                                type="text"
+                                {...register("last_name", { required: true })}
+                                placeholder="user name"
+                                className="input input-bordered"
+                            />
+                            {errors.name && <span className="text-red-700">Last name is required</span>}
                         </div>
                         <div className="form-control">
                             <label className="label">
