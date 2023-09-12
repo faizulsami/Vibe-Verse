@@ -39,7 +39,7 @@ const Register = () => {
             .then(result => {
                 updateUserProfile(data.name, data.photo)
                     .then(() => {
-                        const saveUser = { name: data.name, email: data.email, password: data.password, photo: data.photo, isAdmin, followers, following, createAt };
+                        const saveUser = { firstName: data.first_name, lastName: data.last_name, email: data.email, password: data.password, photo: data.photo, isAdmin, followers, following, createAt };
 
                         fetch('http://localhost:5000/users', {
                             method: 'POST',
@@ -77,15 +77,27 @@ const Register = () => {
                         </p>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text text-black">Name</span>
+                                <span className="label-text text-black">First Name</span>
                             </label>
                             <input
                                 type="text"
-                                {...register("name", { required: true })}
+                                {...register("first_name", { required: true })}
                                 placeholder="user name"
                                 className="input input-bordered"
                             />
-                            {errors.name && <span className="text-red-700">Name is required</span>}
+                            {errors.name && <span className="text-red-700">First name is required</span>}
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text text-black">Last Name</span>
+                            </label>
+                            <input
+                                type="text"
+                                {...register("last_name", { required: true })}
+                                placeholder="user name"
+                                className="input input-bordered"
+                            />
+                            {errors.name && <span className="text-red-700">Last name is required</span>}
                         </div>
                         <div className="form-control">
                             <label className="label">

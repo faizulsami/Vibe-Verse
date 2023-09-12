@@ -11,13 +11,11 @@ const ProfileModal = ({ modalOpened, setModalOpened }) => {
       }
       overlayOpacity={0.55}
       overlayBlur={3}
-      size="55%"
       opened={modalOpened}
       onClose={() => setModalOpened(false)}
     >
       <form className="infoForm">
-        <h3 className='font-semibold text-lg'>Your info</h3>
-
+        <h3 className='font-semibold text-lg '>Your info</h3>
         <div>
           <input
             type="text"
@@ -25,7 +23,6 @@ const ProfileModal = ({ modalOpened, setModalOpened }) => {
             name="FirstName"
             placeholder="First Name"
           />
-
           <input
             type="text"
             className="p-2 my-3"
@@ -33,7 +30,6 @@ const ProfileModal = ({ modalOpened, setModalOpened }) => {
             placeholder="Last Name"
           />
         </div>
-
         <div>
           <input
             type="text"
@@ -42,7 +38,6 @@ const ProfileModal = ({ modalOpened, setModalOpened }) => {
             placeholder="Works at"
           />
         </div>
-
         <div>
           <input
             type="text"
@@ -50,7 +45,6 @@ const ProfileModal = ({ modalOpened, setModalOpened }) => {
             name="livesIN"
             placeholder="LIves in"
           />
-
           <input
             type="text"
             className="p-2 my-3"
@@ -58,7 +52,6 @@ const ProfileModal = ({ modalOpened, setModalOpened }) => {
             placeholder="Country"
           />
         </div>
-
         <div>
           <input
             type="text"
@@ -66,23 +59,21 @@ const ProfileModal = ({ modalOpened, setModalOpened }) => {
             placeholder="RelationShip Status"
           />
         </div>
-
-
         <div>
             Profile Image 
             <input type="file" name='profileImg'/>
+            <br/>
             Cover Image
             <input type="file" name="coverImg" />
         </div>
-
-        <a href="#_" className="relative inline-block text-sm group md:mt-5">
-  <span className="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
-    <span className="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"></span>
-    <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
-    <span className="relative">Update</span>
-  </span>
-  <span className="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0" data-rounded="rounded-lg"></span>
-</a>
+        <a href="#_" className="relative inline-block text-sm group mt-3 md:mt-5 lg:mt-5">
+        <span className="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
+          <span className="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"></span>
+          <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
+          <span className="relative">Update</span>
+        </span>
+        <span className="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0" data-rounded="rounded-lg"></span>
+        </a>
       </form>
     </Modal>
     );
