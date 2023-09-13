@@ -36,7 +36,7 @@ const PostShare = () => {
         .then(imgResponse => {
             if (imgResponse.success) {
                 const imgURL = imgResponse.data.display_url;
-            console.log(imgURL);
+            console.log(imgURL,inputValue);
 
             }
         })
