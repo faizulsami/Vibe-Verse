@@ -12,15 +12,16 @@ const SocialLogin = () => {
 
     const handleGoogleLogin = () => {
         const isAdmin= false;
-        const followers = [];
-        const following=[];
+        const followers = {};
+        const following={};
         const createAt = currentTime.toISOString();
+        const updateAt =currentTime.toISOString()
 
         googlePopup()
             .then((result) => {
                 const loggedInUser = result.user;
         
-                const saveUser = { name: loggedInUser.displayName, email: loggedInUser.email ,photo:loggedInUser.photoURL,isAdmin,followers,following ,createAt}
+                const saveUser = { name: loggedInUser.displayName, email: loggedInUser.email ,photo:loggedInUser.photoURL,isAdmin,followers,following ,createAt,updateAt}
                 fetch('http://localhost:5000/users', {
                     method: 'POST',
                     headers: {

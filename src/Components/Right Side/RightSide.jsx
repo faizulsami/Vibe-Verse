@@ -5,7 +5,6 @@ import TrendCard from "../Trend Card/TrendCard";
 import ShareModal from "../Share Modal/ShareModal";
 const RightSide = () => {
   const [modalOpened, setModalOpened] = useState(false);
-  console.log(modalOpened);
   return (
     <div className="grid  lg:gap-y-10 md:gap-y-4" >
       <div className="mt-10  text-2xl lg:text-3xl md:text-xl flex justify-between ">
