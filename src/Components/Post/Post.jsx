@@ -5,8 +5,9 @@ import NotLike from '../../img/notlike.png'
 import { useRef, useState } from 'react';
 import { AiFillLike } from "react-icons/ai";
 
-const Post = ({ data }) => {
-
+const Post = ( postData ) => {
+const allPost=postData.data
+    // const {displayName,email,photoURL,postText,postImg}=post;
 
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const dropdownRef = useRef(null);
@@ -48,11 +49,10 @@ const Post = ({ data }) => {
         }
     };
 
-    console.log(reaction);
 
     return (
         <div style={{ backgroundColor: 'var(--cardColor)' }} className="flex flex-col p-4 rounded-2xl gap-4">
-            <img className='w-full max-h-96 object-cover rounded-lg' src={data.img} alt="" />
+            <img className='w-full max-h-96 object-cover rounded-lg' src={allPost?.postImg} alt="" />
 
 
             <div className="flex items-start gap-6">
@@ -72,7 +72,8 @@ const Post = ({ data }) => {
                     onMouseEnter={toggleDropdown}
                     onMouseLeave={toggleDropdown}
                     className="flex items-center  py-0 px-2 rounded-2xl gap-1 ">
-                    <img src={data.liked ? Heart : NotLike} alt="" />
+                        li
+                    {/* <img src={data.liked ? Heart : NotLike} alt="" /> */}
                 </div>
 
                 <img src={Comment} alt="" />
@@ -80,11 +81,11 @@ const Post = ({ data }) => {
             </div>
 
 
-            <span style={{ color: "var(--gray)", fontSize: '12px' }}>{data.likes} likes</span>
+            {/* <span style={{ color: "var(--gray)", fontSize: '12px' }}>{data.likes} likes</span> */}
 
             <div className="detail">
-                <span><b>{data.name}</b></span>
-                <span> {data.desc}</span>
+                <span><b>{allPost?.displayName}</b></span>
+                <span> {allPost?.postText}</span>
             </div>
         </div>
     );

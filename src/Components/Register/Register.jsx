@@ -28,18 +28,19 @@ const Register = () => {
             setError('Password and Confirm Password should match');
             return;
         }
-        const followers = []
-        const following = []
+        const followers = {}
+        const following = {}
         const isAdmin = false;
 
         const createAt = currentTime.toISOString();
-        console.log(createAt);
+        const updateAt =currentTime.toISOString()
+
 
         createUser(data.email, data.password)
             .then(result => {
                 updateUserProfile(data.name, data.photo)
                     .then(() => {
-                        const saveUser = { firstName: data.first_name, lastName: data.last_name, email: data.email, password: data.password, photo: data.photo, isAdmin, followers, following, createAt };
+                        const saveUser = { firstName: data.first_name, lastName: data.last_name, email: data.email, password: data.password, photo: data.photo, isAdmin, followers, following, createAt,updateAt };
 
                         fetch('http://localhost:5000/users', {
                             method: 'POST',
